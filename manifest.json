@@ -11,7 +11,7 @@
     "scripts": [
       "lib/jquery.min.js",
       "lib/purl.min.js",
-      "clear_cookies.js"
+      "handle_remove.js"
     ]
   },
   "permissions": [
