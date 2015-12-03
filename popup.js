@@ -50,16 +50,16 @@ function getCurrentTabUrl(callback) {
 
 
 
-function clearCookiesByDomain(domainName) {
-  if(domainName.length>0)
-    chrome.cookies.getAll({domain: domainName}, function(cookies) {
-        for(var i=0; i<cookies.length;i++) {
-            chrome.cookies.remove({url: domainName + cookies[i].path, name: cookies[i].name});
-        }
-    });
-  else
-    alert('Give me a domainName');
-}
+// function clearCookiesByDomain(domainName) {
+//   if(domainName.length>0)
+//     chrome.cookies.getAll({domain: domainName}, function(cookies) {
+//         for(var i=0; i<cookies.length;i++) {
+//             chrome.cookies.remove({url: domainName + cookies[i].path, name: cookies[i].name});
+//         }
+//     });
+//   else
+//     alert('Give me a domainName');
+// }
 
 
 
@@ -111,7 +111,6 @@ function renderStatus(statusText) {
 document.addEventListener('DOMContentLoaded', function() {
   getCurrentTabUrl(function(url) {
     var $url = purl(url);
-
     var domainName = $url.attr('host');
     // Put the image URL in Google search.
     clearCookiesByDomain(domainName);

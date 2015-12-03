@@ -1,24 +1,23 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
+  "name": "clear cookies",
+  "description": "Clear Cookies on Current Domain",
   "version": "1.0",
-
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_icon": "icon.png"
   },
   "background": {
     "scripts": [
-    "jquery.min.js",
-    "purl.min.js",
-    "popup.js"
+      "lib/jquery.min.js",
+      "lib/purl.min.js",
+      "clear_cookies.js"
     ]
   },
   "permissions": [
     "activeTab",
     "cookies",
+    "tabs",
     "http://*/*",
     "https://*/*"
   ]
